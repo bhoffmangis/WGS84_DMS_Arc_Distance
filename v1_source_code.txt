@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,17 +34,23 @@ namespace WGS84_DMS_Arc_Distance
                 double PRAD = 6356752.3142;                         // polar radius
                 double FLAT = (ERAD - PRAD) / ERAD;                 // flattening/oblateness
                 double ESQD = (2.0 * FLAT) - Math.Pow(FLAT, 2.0);   // eccentricity squared
-                
+                double pi = Math.PI;                                // pi as simplified constant
+                double cosLatInput = Math.Cos(latInputRad);         // cosine of input latitude
+                double sinLatInput = Math.Sin(latInputRad);         // sine of input latitude
+                double sinLatInputSq = Math.Pow(sinLatInput, 2.0);  // sine of input latitude squared
+
+                // Variable for square root function for E/W denominator
+                double ewDenSquareRoot = Math.Sqrt((1.0 - (ESQD * sinLatInputSq)));
+
+                // Variable for power function for N/S denominator
+                double nsDenPower = Math.Pow((1.0 - (ESQD * sinLatInputSq)), (3.0/2.0));
+
 
                 // East/West calculation (in meters)
-                double ewCalcMeters = ((Math.PI) * ERAD * (Math.Cos(latInputRad))) / 
-                    (180.0 * (Math.Sqrt((1.0 - (ESQD * (Math.Pow((Math.Sin(latInputRad)), 2.0)))))));
+                double ewCalcMeters = (pi * ERAD * cosLatInput) / (180.0 * ewDenSquareRoot);
 
                 // North/South calculation (in meters)
-                double nsCalcMeters = ((Math.PI) * ERAD * (1.0 - ESQD)) / 
-                    (180.0 * (Math.Pow((1.0 - (ESQD * (Math.Pow((Math.Sin(latInputRad)), 2.0)))), (1.5))));
-
-
+                double nsCalcMeters = (pi * ERAD * (1.0 - ESQD)) / (180.0 * nsDenPower);
 
 
                 // Variables - East/West distance measurement output
