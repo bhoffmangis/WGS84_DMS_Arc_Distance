@@ -15,7 +15,7 @@ private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
                 "Calculated distances are bisected by the user-entered\n" +
                 "latitude value.  That is to say, half of the calculated\n" +
                 "distance is north of the entered latitude value and half\n" +
-                "is south.  This is to account for the decrease in distance\n" +
+                "is south.  This is to account for the increase in distance\n" +
                 "between the parallels as the reference point moves\n" +
                 "closer to the poles (caused by rotational flattening).\n\n" + 
                 "The values derived with this calculator are based on the\n" +
