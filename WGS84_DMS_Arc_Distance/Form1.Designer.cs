@@ -36,6 +36,7 @@ namespace WGS84_DMS_Arc_Distance
             this.milesRadioButton = new System.Windows.Forms.RadioButton();
             this.feetRadioButton = new System.Windows.Forms.RadioButton();
             this.unitMeasurementGroupBox = new System.Windows.Forms.GroupBox();
+            this.nautMilesRadioButton = new System.Windows.Forms.RadioButton();
             this.degreeEWLabel = new System.Windows.Forms.Label();
             this.minuteEWLabel = new System.Windows.Forms.Label();
             this.secondEWLabel = new System.Windows.Forms.Label();
@@ -91,7 +92,7 @@ namespace WGS84_DMS_Arc_Distance
             // 
             this.kilometersRadioButton.AutoSize = true;
             this.kilometersRadioButton.Checked = true;
-            this.kilometersRadioButton.Location = new System.Drawing.Point(18, 27);
+            this.kilometersRadioButton.Location = new System.Drawing.Point(135, 27);
             this.kilometersRadioButton.Name = "kilometersRadioButton";
             this.kilometersRadioButton.Size = new System.Drawing.Size(81, 19);
             this.kilometersRadioButton.TabIndex = 2;
@@ -102,7 +103,7 @@ namespace WGS84_DMS_Arc_Distance
             // metersRadioButton
             // 
             this.metersRadioButton.AutoSize = true;
-            this.metersRadioButton.Location = new System.Drawing.Point(18, 53);
+            this.metersRadioButton.Location = new System.Drawing.Point(135, 53);
             this.metersRadioButton.Name = "metersRadioButton";
             this.metersRadioButton.Size = new System.Drawing.Size(61, 19);
             this.metersRadioButton.TabIndex = 3;
@@ -113,7 +114,7 @@ namespace WGS84_DMS_Arc_Distance
             // milesRadioButton
             // 
             this.milesRadioButton.AutoSize = true;
-            this.milesRadioButton.Location = new System.Drawing.Point(142, 26);
+            this.milesRadioButton.Location = new System.Drawing.Point(18, 27);
             this.milesRadioButton.Name = "milesRadioButton";
             this.milesRadioButton.Size = new System.Drawing.Size(53, 19);
             this.milesRadioButton.TabIndex = 4;
@@ -124,7 +125,7 @@ namespace WGS84_DMS_Arc_Distance
             // feetRadioButton
             // 
             this.feetRadioButton.AutoSize = true;
-            this.feetRadioButton.Location = new System.Drawing.Point(142, 52);
+            this.feetRadioButton.Location = new System.Drawing.Point(18, 53);
             this.feetRadioButton.Name = "feetRadioButton";
             this.feetRadioButton.Size = new System.Drawing.Size(47, 19);
             this.feetRadioButton.TabIndex = 5;
@@ -134,16 +135,28 @@ namespace WGS84_DMS_Arc_Distance
             // 
             // unitMeasurementGroupBox
             // 
+            this.unitMeasurementGroupBox.Controls.Add(this.nautMilesRadioButton);
             this.unitMeasurementGroupBox.Controls.Add(this.feetRadioButton);
             this.unitMeasurementGroupBox.Controls.Add(this.milesRadioButton);
             this.unitMeasurementGroupBox.Controls.Add(this.metersRadioButton);
             this.unitMeasurementGroupBox.Controls.Add(this.kilometersRadioButton);
             this.unitMeasurementGroupBox.Location = new System.Drawing.Point(22, 85);
             this.unitMeasurementGroupBox.Name = "unitMeasurementGroupBox";
-            this.unitMeasurementGroupBox.Size = new System.Drawing.Size(240, 94);
+            this.unitMeasurementGroupBox.Size = new System.Drawing.Size(240, 110);
             this.unitMeasurementGroupBox.TabIndex = 6;
             this.unitMeasurementGroupBox.TabStop = false;
             this.unitMeasurementGroupBox.Text = "Unit of Measurement";
+            // 
+            // nautMilesRadioButton
+            // 
+            this.nautMilesRadioButton.AutoSize = true;
+            this.nautMilesRadioButton.Location = new System.Drawing.Point(18, 79);
+            this.nautMilesRadioButton.Name = "nautMilesRadioButton";
+            this.nautMilesRadioButton.Size = new System.Drawing.Size(100, 19);
+            this.nautMilesRadioButton.TabIndex = 6;
+            this.nautMilesRadioButton.TabStop = true;
+            this.nautMilesRadioButton.Text = "Nautical Miles";
+            this.nautMilesRadioButton.UseVisualStyleBackColor = true;
             // 
             // degreeEWLabel
             // 
@@ -177,7 +190,7 @@ namespace WGS84_DMS_Arc_Distance
             this.ewDegreeOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ewDegreeOutput.Location = new System.Drawing.Point(75, 28);
             this.ewDegreeOutput.Name = "ewDegreeOutput";
-            this.ewDegreeOutput.Size = new System.Drawing.Size(80, 23);
+            this.ewDegreeOutput.Size = new System.Drawing.Size(73, 23);
             this.ewDegreeOutput.TabIndex = 10;
             this.ewDegreeOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -186,7 +199,7 @@ namespace WGS84_DMS_Arc_Distance
             this.ewMinuteOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ewMinuteOutput.Location = new System.Drawing.Point(75, 57);
             this.ewMinuteOutput.Name = "ewMinuteOutput";
-            this.ewMinuteOutput.Size = new System.Drawing.Size(80, 23);
+            this.ewMinuteOutput.Size = new System.Drawing.Size(73, 23);
             this.ewMinuteOutput.TabIndex = 11;
             this.ewMinuteOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -195,7 +208,7 @@ namespace WGS84_DMS_Arc_Distance
             this.ewSecondOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ewSecondOutput.Location = new System.Drawing.Point(75, 86);
             this.ewSecondOutput.Name = "ewSecondOutput";
-            this.ewSecondOutput.Size = new System.Drawing.Size(80, 23);
+            this.ewSecondOutput.Size = new System.Drawing.Size(73, 23);
             this.ewSecondOutput.TabIndex = 12;
             this.ewSecondOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -210,7 +223,7 @@ namespace WGS84_DMS_Arc_Distance
             this.EWDistanceGroupBox.Controls.Add(this.secondEWLabel);
             this.EWDistanceGroupBox.Controls.Add(this.minuteEWLabel);
             this.EWDistanceGroupBox.Controls.Add(this.degreeEWLabel);
-            this.EWDistanceGroupBox.Location = new System.Drawing.Point(22, 192);
+            this.EWDistanceGroupBox.Location = new System.Drawing.Point(22, 208);
             this.EWDistanceGroupBox.Name = "EWDistanceGroupBox";
             this.EWDistanceGroupBox.Size = new System.Drawing.Size(240, 130);
             this.EWDistanceGroupBox.TabIndex = 13;
@@ -219,23 +232,23 @@ namespace WGS84_DMS_Arc_Distance
             // 
             // secondEWUnitLabel
             // 
-            this.secondEWUnitLabel.Location = new System.Drawing.Point(165, 87);
+            this.secondEWUnitLabel.Location = new System.Drawing.Point(158, 87);
             this.secondEWUnitLabel.Name = "secondEWUnitLabel";
-            this.secondEWUnitLabel.Size = new System.Drawing.Size(62, 15);
+            this.secondEWUnitLabel.Size = new System.Drawing.Size(72, 15);
             this.secondEWUnitLabel.TabIndex = 15;
             // 
             // minuteEWUnitLabel
             // 
-            this.minuteEWUnitLabel.Location = new System.Drawing.Point(165, 58);
+            this.minuteEWUnitLabel.Location = new System.Drawing.Point(158, 58);
             this.minuteEWUnitLabel.Name = "minuteEWUnitLabel";
-            this.minuteEWUnitLabel.Size = new System.Drawing.Size(62, 15);
+            this.minuteEWUnitLabel.Size = new System.Drawing.Size(72, 15);
             this.minuteEWUnitLabel.TabIndex = 14;
             // 
             // degreeEWUnitLabel
             // 
-            this.degreeEWUnitLabel.Location = new System.Drawing.Point(165, 29);
+            this.degreeEWUnitLabel.Location = new System.Drawing.Point(158, 29);
             this.degreeEWUnitLabel.Name = "degreeEWUnitLabel";
-            this.degreeEWUnitLabel.Size = new System.Drawing.Size(62, 15);
+            this.degreeEWUnitLabel.Size = new System.Drawing.Size(72, 15);
             this.degreeEWUnitLabel.TabIndex = 13;
             // 
             // degreeNSLabel
@@ -270,7 +283,7 @@ namespace WGS84_DMS_Arc_Distance
             this.nsDegreeOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.nsDegreeOutput.Location = new System.Drawing.Point(75, 28);
             this.nsDegreeOutput.Name = "nsDegreeOutput";
-            this.nsDegreeOutput.Size = new System.Drawing.Size(80, 23);
+            this.nsDegreeOutput.Size = new System.Drawing.Size(73, 23);
             this.nsDegreeOutput.TabIndex = 17;
             this.nsDegreeOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -279,7 +292,7 @@ namespace WGS84_DMS_Arc_Distance
             this.nsMinuteOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.nsMinuteOutput.Location = new System.Drawing.Point(75, 57);
             this.nsMinuteOutput.Name = "nsMinuteOutput";
-            this.nsMinuteOutput.Size = new System.Drawing.Size(80, 23);
+            this.nsMinuteOutput.Size = new System.Drawing.Size(73, 23);
             this.nsMinuteOutput.TabIndex = 18;
             this.nsMinuteOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -288,7 +301,7 @@ namespace WGS84_DMS_Arc_Distance
             this.nsSecondOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.nsSecondOutput.Location = new System.Drawing.Point(75, 86);
             this.nsSecondOutput.Name = "nsSecondOutput";
-            this.nsSecondOutput.Size = new System.Drawing.Size(80, 23);
+            this.nsSecondOutput.Size = new System.Drawing.Size(73, 23);
             this.nsSecondOutput.TabIndex = 19;
             this.nsSecondOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -303,7 +316,7 @@ namespace WGS84_DMS_Arc_Distance
             this.NSDistanceGroupBox.Controls.Add(this.secondNSLabel);
             this.NSDistanceGroupBox.Controls.Add(this.minuteNSLabel);
             this.NSDistanceGroupBox.Controls.Add(this.degreeNSLabel);
-            this.NSDistanceGroupBox.Location = new System.Drawing.Point(22, 335);
+            this.NSDistanceGroupBox.Location = new System.Drawing.Point(22, 351);
             this.NSDistanceGroupBox.Name = "NSDistanceGroupBox";
             this.NSDistanceGroupBox.Size = new System.Drawing.Size(240, 130);
             this.NSDistanceGroupBox.TabIndex = 20;
@@ -312,23 +325,23 @@ namespace WGS84_DMS_Arc_Distance
             // 
             // secondNSUnitLabel
             // 
-            this.secondNSUnitLabel.Location = new System.Drawing.Point(165, 87);
+            this.secondNSUnitLabel.Location = new System.Drawing.Point(158, 87);
             this.secondNSUnitLabel.Name = "secondNSUnitLabel";
-            this.secondNSUnitLabel.Size = new System.Drawing.Size(62, 15);
+            this.secondNSUnitLabel.Size = new System.Drawing.Size(72, 15);
             this.secondNSUnitLabel.TabIndex = 22;
             // 
             // minuteNSUnitLabel
             // 
-            this.minuteNSUnitLabel.Location = new System.Drawing.Point(165, 58);
+            this.minuteNSUnitLabel.Location = new System.Drawing.Point(158, 58);
             this.minuteNSUnitLabel.Name = "minuteNSUnitLabel";
-            this.minuteNSUnitLabel.Size = new System.Drawing.Size(62, 15);
+            this.minuteNSUnitLabel.Size = new System.Drawing.Size(72, 15);
             this.minuteNSUnitLabel.TabIndex = 21;
             // 
             // degreeNSUnitLabel
             // 
-            this.degreeNSUnitLabel.Location = new System.Drawing.Point(165, 29);
+            this.degreeNSUnitLabel.Location = new System.Drawing.Point(158, 29);
             this.degreeNSUnitLabel.Name = "degreeNSUnitLabel";
-            this.degreeNSUnitLabel.Size = new System.Drawing.Size(62, 15);
+            this.degreeNSUnitLabel.Size = new System.Drawing.Size(72, 15);
             this.degreeNSUnitLabel.TabIndex = 20;
             // 
             // menuStrip1
@@ -358,7 +371,7 @@ namespace WGS84_DMS_Arc_Distance
             // 
             // calculateButton
             // 
-            this.calculateButton.Location = new System.Drawing.Point(35, 484);
+            this.calculateButton.Location = new System.Drawing.Point(35, 494);
             this.calculateButton.Name = "calculateButton";
             this.calculateButton.Size = new System.Drawing.Size(100, 30);
             this.calculateButton.TabIndex = 22;
@@ -368,7 +381,7 @@ namespace WGS84_DMS_Arc_Distance
             // 
             // clearButton
             // 
-            this.clearButton.Location = new System.Drawing.Point(150, 484);
+            this.clearButton.Location = new System.Drawing.Point(150, 494);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(100, 30);
             this.clearButton.TabIndex = 23;
@@ -390,7 +403,7 @@ namespace WGS84_DMS_Arc_Distance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 541);
+            this.ClientSize = new System.Drawing.Size(284, 551);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.calculateButton);
@@ -400,8 +413,8 @@ namespace WGS84_DMS_Arc_Distance
             this.Controls.Add(this.latitudeTextbox);
             this.Controls.Add(this.enterLatitudeLabel);
             this.Controls.Add(this.menuStrip1);
-            this.MaximumSize = new System.Drawing.Size(300, 580);
-            this.MinimumSize = new System.Drawing.Size(300, 580);
+            this.MaximumSize = new System.Drawing.Size(300, 590);
+            this.MinimumSize = new System.Drawing.Size(300, 590);
             this.Name = "Form1";
             this.Text = "DMS Arc Distance";
             this.unitMeasurementGroupBox.ResumeLayout(false);
@@ -452,6 +465,7 @@ namespace WGS84_DMS_Arc_Distance
         private System.Windows.Forms.Label degreeNSUnitLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem creditToolStripMenuItem;
+        private System.Windows.Forms.RadioButton nautMilesRadioButton;
     }
 }
 
