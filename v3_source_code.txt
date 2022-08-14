@@ -206,8 +206,8 @@ namespace WGS84_DMS_Arc_Distance
         {
             MessageBox.Show("This calculator computes the arc distance of one degree,\n" +
                 "minute, and second of longitude and latitude from any\n" +
-                "given latitude (expressed in the user's choice of kilometers,\n" +
-                "meters, miles, or feet).\n\n" +
+                "given latitude (expressed in the user's choice of miles,\n" +
+                "feet, nautical miles, kilometers, or meters).\n\n" +
                 "The values derived with this calculator are based on the\n" +
                 "World Geodetic Survey 1984 (WGS84) reference ellipsoid.\n\n" +
                 "The radii used in the formulas are as follows:\n\n" +
