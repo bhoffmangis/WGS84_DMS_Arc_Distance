@@ -121,6 +121,26 @@ namespace WGS84_DMS_Arc_Distance
                     secondNSUnitLabel.Text = "miles";
                 }
 
+                else if (nautMilesRadioButton.Checked)
+                {
+                    ewDistDeg = ewCalcMeters * 0.0005399568;
+                    ewDistMin = ewDistDeg / 60.0;
+                    ewDistSec = ewDistDeg / 3600.0;
+
+                    nsDistDeg = nsCalcMeters * 0.0005399568;
+                    nsDistMin = nsDistDeg / 60.0;
+                    nsDistSec = nsDistDeg / 3600.0;
+
+                    // assign unit to unit labels
+                    degreeEWUnitLabel.Text = "naut. miles";
+                    minuteEWUnitLabel.Text = "naut. miles";
+                    secondEWUnitLabel.Text = "naut. miles";
+
+                    degreeNSUnitLabel.Text = "naut. miles";
+                    minuteNSUnitLabel.Text = "naut. miles";
+                    secondNSUnitLabel.Text = "naut. miles";
+                }
+
                 else
                 {
                     ewDistDeg = ewCalcMeters * 3.2808399;

@@ -41,8 +41,11 @@ namespace WGS84_DMS_Arc_Distance
                     (180.0 * (Math.Sqrt((1.0 - (ESQD * (Math.Pow((Math.Sin(latInputRad)), 2.0)))))));
 
                 // North/South calculation (in meters)
-                double nsCalcMeters = ((Math.PI) * ERAD * (1.0 - ESQD)) /
-                    (180.0 * (Math.Pow((1.0 - (ESQD * (Math.Pow((Math.Sin(latInputRad)), 2.0)))), (1.5))));
+                /*double nsCalcMeters = ((Math.PI) * ERAD * (1.0 - ESQD)) /
+                    (180.0 * (Math.Pow((1.0 - (ESQD * (Math.Pow((Math.Sin(latInputRad)), 2.0)))), (1.5))));*/
+
+                double nsCalcMeters = 111132.954 - (559.822 * (Math.Cos(2 * latInputRad))) +
+                    (1.175 * (Math.Cos(4 * latInputRad)));
 
 
 

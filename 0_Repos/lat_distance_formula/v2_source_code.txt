@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,14 +34,14 @@ namespace WGS84_DMS_Arc_Distance
                 double PRAD = 6356752.3142;                         // polar radius
                 double FLAT = (ERAD - PRAD) / ERAD;                 // flattening/oblateness
                 double ESQD = (2.0 * FLAT) - Math.Pow(FLAT, 2.0);   // eccentricity squared
-
+                
 
                 // East/West calculation (in meters)
-                double ewCalcMeters = ((Math.PI) * ERAD * (Math.Cos(latInputRad))) /
+                double ewCalcMeters = ((Math.PI) * ERAD * (Math.Cos(latInputRad))) / 
                     (180.0 * (Math.Sqrt((1.0 - (ESQD * (Math.Pow((Math.Sin(latInputRad)), 2.0)))))));
 
                 // North/South calculation (in meters)
-                double nsCalcMeters = ((Math.PI) * ERAD * (1.0 - ESQD)) /
+                double nsCalcMeters = ((Math.PI) * ERAD * (1.0 - ESQD)) / 
                     (180.0 * (Math.Pow((1.0 - (ESQD * (Math.Pow((Math.Sin(latInputRad)), 2.0)))), (1.5))));
 
 
@@ -152,10 +152,10 @@ namespace WGS84_DMS_Arc_Distance
             }
             else
             {
-                MessageBox.Show("Invalid input!\n\n" +
-                   "Enter a latitude between\n" + "-90° and 90° (inclusive).",
-                   "Invalid Input", MessageBoxButtons.OK,
-               MessageBoxIcon.Error);
+                 MessageBox.Show("Invalid input!\n\n" +
+                    "Enter a latitude between\n" + "-90° and 90° (inclusive).", 
+                    "Invalid Input", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
             }
 
         }
