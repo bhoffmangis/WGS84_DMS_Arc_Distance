@@ -7,4 +7,5 @@ This calculator computes the arc distance of one degree, minute, and second of l
 The radii used in the formulas are as follows:
 
 Semi-major (equatorial) --> 6,378,137.0000 meters
+
 Semi-minor (polar) --------> 6,356,752.3142 meters
