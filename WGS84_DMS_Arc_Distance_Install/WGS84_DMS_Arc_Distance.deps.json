@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "WGS84_DMS_Arc_Distance/1.0.0": {
+        "runtime": {
+          "WGS84_DMS_Arc_Distance.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WGS84_DMS_Arc_Distance/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
